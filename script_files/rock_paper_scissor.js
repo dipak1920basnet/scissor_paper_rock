@@ -1,5 +1,5 @@
 function getComputerChoice(){
-    let computer_choice = ["rock","paper","scissor"]
+    let computer_choice = ["r","p","s"]
     let choice = computer_choice[Math.floor(Math.random()*computer_choice.length)];
     return choice;
 }
@@ -38,15 +38,7 @@ function playround(human, computer){
         return "draw"
     }
     else{
-        if(human == "s" & computer == "p")
-        {
-            return "human";
-        }
-        else if (human == "p" & computer == "r")
-        {
-            return "human";
-        }
-        else if (human == "r" & computer == "s")
+        if((human == "s" && computer == "p") || (human == "p" && computer == "r")|| (human == "r" && computer == "s"))
         {
             return "human";
         }
@@ -64,10 +56,10 @@ function Playground()
 
     while (round != 5)
     {
-        human_ = getHumanChoice()
-        computer_ = getComputerChoice()
+        let human_ = getHumanChoice()
+        let computer_ = getComputerChoice()
 
-        check_score = playround(human_, computer_)
+        let check_score = playround(human_, computer_)
         if (check_score == "human")
         {
             human_score += 1;
@@ -76,12 +68,14 @@ function Playground()
         {
             computer_score +=1;
         }
+        round += 1
     }
+
     if (human_score > computer_score)
     {
-        console.log("Humans won the game")
+        console.log("Human won the game")
     }
-    else if (computer_choices > human_score)
+    else if (computer_score > human_score)
     {
         console.log("Computer wins the game")
     }
@@ -90,3 +84,5 @@ function Playground()
         console.log("The match score is draw")
     }
 }
+
+Playground()
