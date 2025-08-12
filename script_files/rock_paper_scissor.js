@@ -56,26 +56,37 @@ function playround(human, computer){
     }
 }
 
-function score(check_score)
+function Playground()
 {
     let human_score = 0;
     let computer_score = 0;
+    let round = 0;
 
-    human_ = getHumanChoice()
-    computer_ = getComputerChoice()
-
-    if (check_score == "human")
+    while (round != 5)
     {
-        human_score += 1;
+        human_ = getHumanChoice()
+        computer_ = getComputerChoice()
+
+        check_score = playround(human_, computer_)
+        if (check_score == "human")
+        {
+            human_score += 1;
+        }
+        else if (check_score == "computer")
+        {
+            computer_score +=1;
+        }
     }
-    else if (check_score == "computer")
+    if (human_score > computer_score)
     {
-        computer_score +=1;
+        console.log("Humans won the game")
+    }
+    else if (computer_choices > human_score)
+    {
+        console.log("Computer wins the game")
+    }
+    else
+    {
+        console.log("The match score is draw")
     }
 }
-
-let computer_choices = getComputerChoice();
-console.log(computer_choices);
-
-let human_choices = getHumanChoice();
-console.log(human_choices);
