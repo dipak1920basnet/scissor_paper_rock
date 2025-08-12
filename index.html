@@ -4,12 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style_files/style.css">
 </head>
 <body>
-    <script src="script_files/rock_paper_scissor.js">
-        
-    </script>
+    <header>
+        <section class="info">
+           <div class="round-info">
+                <div class="total_round">
+                    <h1> Total Round: 5 </h1>
+                </div>
+                <div class="current_round">
+                    <h1> Current Round: <span id="round-numbers">0</span> </h1>
+                </div>
+           </div>
+        </section>
+        <section class="game_setting">
+            <div class="reset_game">
+                <button id="reset"> Re-start game </button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="Computer-section">
+            <div class="computer_move">
+                <h1> Computer moved: <span id="bot_move">None</span></h1>
+            </div>
+        </section>
+        <section id="score">
+            <div id="computer_score"> Computer_Score: <span id="comp_score">0</span> </div>
+            <div id="player_score"> Player_Score: <span id="play_score"> 0</span> </div>
+        </section>
+        <section class="Player-section">
+            <div class="player_options">
+                <button id="rock"> Rock </button>
+                <button id="paper"> Paper </button>
+                <button id="scissor"> Scissor </button>
+            </div>
+        </section>
+    </main>
+    <footer>
 
-    <h1> Open console to play the game or to check the winner of the game </h1>
+    </footer>
 </body>
 </html>
