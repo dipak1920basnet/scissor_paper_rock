@@ -1,0 +1,33 @@
+header,
+.round-info
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+    
+}
+.info
+{
+    width: 50%;
+}
+.total_round,
+.current_round
+{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.game_setting,
+main
+{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+
+main
+{
+    padding: 2%;
+    /* padding-right: 10%; */
+    padding: 10%;
+    padding-left: 15%;
+}
